@@ -225,3 +225,24 @@ export function AlertIcon(props: IconProps) {
     </Icon>
   );
 }
+
+export function ShareIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <circle cx="6" cy="12" r="2.2" />
+      <circle cx="17.5" cy="6" r="2.2" />
+      <circle cx="17.5" cy="18" r="2.2" />
+      <line x1="7.9" y1="11" x2="15.7" y2="7" />
+      <line x1="7.9" y1="13" x2="15.7" y2="17" />
+    </Icon>
+  );
+}
+
+export function FlagIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M6 3v18" />
+      <path d="M6 4.5c3-1.5 6 1.5 9 0v9c-3 1.5-6-1.5-9 0Z" />
+    </Icon>
+  );
+}
