@@ -1,0 +1,175 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display);
+  --font-heading: var(--font-display);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* FeedAPet — tokens de marca, por encima de los semánticos de shadcn */
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-gold: var(--gold);
+  --color-gold-text: var(--gold-text);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-gold-soft: var(--gold-soft);
+  --color-clay: var(--clay);
+  --color-clay-soft: var(--clay-soft);
+}
+
+/*
+  Paleta FeedAPet: verde petróleo (confianza/naturaleza) + mostaza cálido
+  (ahorro/acción) sobre neutro salvia-papel — deliberadamente distinta del
+  índigo/violeta por defecto y del crema+terracota genérico.
+  Ver docs/ (auditoría UX 2026-08-10) para el razonamiento completo.
+*/
+:root {
+  --background: #F2F3EE;
+  --foreground: #12211D;
+  --card: #FFFFFF;
+  --card-foreground: #12211D;
+  --popover: #FFFFFF;
+  --popover-foreground: #12211D;
+  --primary: #14524A;
+  --primary-foreground: #FFFFFF;
+  --secondary: #E7E9E0;
+  --secondary-foreground: #12211D;
+  --muted: #E7E9E0;
+  --muted-foreground: #55655F;
+  --accent: #DCEAE5;
+  --accent-foreground: #0D3B35;
+  --destructive: #A13A32;
+  --border: #DCDED3;
+  --input: #DCDED3;
+  --ring: #14524A;
+  --chart-1: #14524A;
+  --chart-2: #E7B24A;
+  --chart-3: #96432A;
+  --chart-4: #55655F;
+  --chart-5: #A13A32;
+  --radius: 0.65rem;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #12211D;
+  --sidebar-primary: #14524A;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #DCEAE5;
+  --sidebar-accent-foreground: #0D3B35;
+  --sidebar-border: #DCDED3;
+  --sidebar-ring: #14524A;
+
+  --brand: #14524A;
+  --brand-strong: #0D3B35;
+  --brand-soft: #DCEAE5;
+  --brand-foreground: #FFFFFF;
+  --gold: #E7B24A;
+  --gold-text: #8C620C;
+  --gold-foreground: #241A03;
+  --gold-soft: #F6E8C9;
+  --clay: #96432A;
+  --clay-soft: #F1DCD2;
+}
+
+.dark {
+  --background: #0E1815;
+  --foreground: #ECEEE6;
+  --card: #142320;
+  --card-foreground: #ECEEE6;
+  --popover: #142320;
+  --popover-foreground: #ECEEE6;
+  --primary: #5FB79C;
+  --primary-foreground: #0E1815;
+  --secondary: #1A2925;
+  --secondary-foreground: #ECEEE6;
+  --muted: #1A2925;
+  --muted-foreground: #9FAEA6;
+  --accent: #17332C;
+  --accent-foreground: #7BC4AC;
+  --destructive: #E0938A;
+  --border: #24352F;
+  --input: #24352F;
+  --ring: #5FB79C;
+  --chart-1: #5FB79C;
+  --chart-2: #E6BD6E;
+  --chart-3: #D18F72;
+  --chart-4: #9FAEA6;
+  --chart-5: #E0938A;
+  --sidebar: #142320;
+  --sidebar-foreground: #ECEEE6;
+  --sidebar-primary: #5FB79C;
+  --sidebar-primary-foreground: #0E1815;
+  --sidebar-accent: #17332C;
+  --sidebar-accent-foreground: #7BC4AC;
+  --sidebar-border: #24352F;
+  --sidebar-ring: #5FB79C;
+
+  --brand: #5FB79C;
+  --brand-strong: #7BC4AC;
+  --brand-soft: #17332C;
+  --brand-foreground: #0E1815;
+  --gold: #E6BD6E;
+  --gold-text: #E6BD6E;
+  --gold-foreground: #241A03;
+  --gold-soft: #332A17;
+  --clay: #D18F72;
+  --clay-soft: #33231C;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+    text-wrap: balance;
+  }
+}
